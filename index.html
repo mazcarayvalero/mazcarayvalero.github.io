@@ -91,7 +91,7 @@ nav{position:sticky;top:0;z-index:999;background:rgba(15,34,51,.97);backdrop-fil
 .mclose{position:absolute;top:22px;right:26px;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
 
 /* HERO */
-.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:120px 0 80px;overflow:hidden;position:relative}
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:80px 0 60px;overflow:hidden;position:relative}
 .hbg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;opacity:.17}
 .hbg::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,34,51,.75) 0%,rgba(15,34,51,.35) 100%)}
 .hgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
@@ -377,8 +377,8 @@ footer{background:var(--navy);padding:60px 0 0}
     <div class="hgrid">
       <div>
         <!-- FOTO BARCO -->
-        <div style="width:100%;height:230px;overflow:hidden;margin-bottom:26px;border-bottom:3px solid var(--gold)">
-          <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=900&q=85&auto=format&fit=crop&crop=center" alt="Embarcación de recreo — Gestoría Náutica Mazcaray & Valero Madrid" style="width:100%;height:100%;object-fit:cover;opacity:.82;display:block">
+        <div style="width:100%;height:220px;overflow:hidden;margin-bottom:22px;border-bottom:3px solid var(--gold)">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=85&auto=format&fit=crop&crop=center" alt="Oficina Gestoría Náutica Mazcaray & Valero Madrid" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.88;display:block">
         </div>
         <div class="hbadge">⚓ Gestoría Náutica Nacional · Madrid</div>
         <h1 class="htitle">Su gestoría y asesoría<br>náutica de <em>confianza</em></h1>
@@ -778,13 +778,14 @@ footer{background:var(--navy);padding:60px 0 0}
       <div class="cform">
         <h3 class="cft">Solicite su consulta gratuita</h3>
         <p class="cfs">Le respondemos en menos de 24 horas · 9:00 – 21:00</p>
+        <form action="https://formspree.io/f/mnjwredj" method="POST">
         <div class="frow">
-          <div class="fg"><label>Nombre</label><input type="text" placeholder="Su nombre"></div>
-          <div class="fg"><label>Teléfono</label><input type="tel" placeholder="+34 "></div>
+          <div class="fg"><label>Nombre</label><input type="text" name="nombre" placeholder="Su nombre"></div>
+          <div class="fg"><label>Teléfono</label><input type="tel" name="telefono" placeholder="+34 "></div>
         </div>
-        <div class="fg"><label>Email</label><input type="email" placeholder="su@email.com"></div>
+        <div class="fg"><label>Email</label><input type="email" name="email" placeholder="su@email.com"></div>
         <div class="fg" style="margin-top:10px"><label>Tipo de trámite</label>
-          <select>
+          <select name="tramite">
             <option value="">Seleccione un servicio</option>
             <option>Cambio de bandera</option>
             <option>Compraventa de embarcación</option>
@@ -801,8 +802,9 @@ footer{background:var(--navy);padding:60px 0 0}
             <option>Otro</option>
           </select>
         </div>
-        <div class="fg" style="margin-top:10px;margin-bottom:18px"><label>Descripción breve</label><textarea placeholder="Cuéntenos brevemente en qué podemos ayudarle..."></textarea></div>
-        <button class="btn bg" style="width:100%">Enviar consulta gratuita →</button>
+        <div class="fg" style="margin-top:10px;margin-bottom:18px"><label>Descripción breve</label><textarea name="descripcion" placeholder="Cuéntenos brevemente en qué podemos ayudarle..."></textarea></div>
+        <button type="submit" class="btn bg" style="width:100%">Enviar consulta gratuita →</button>
+      </form>
       </div>
     </div>
   </div>
